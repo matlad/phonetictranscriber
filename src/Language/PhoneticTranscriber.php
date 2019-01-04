@@ -148,7 +148,7 @@ class PhoneticTranscriber
 		if( isset( $this->data['text_to_transcribe'] ) && is_string( $this->data['text_to_transcribe'] ) && strlen( $this->data['text_to_transcribe'] ) >= 1 )
 		{
 			$transcription = $this->getTranscription();
-			preg_match_all( '/.+?\<span\s+class\=\"transcribed[\_]word\"\>(<a.+?\>)?(.+)(\<\/a\>)?\<\/span\>.+?/i', $transcription, $matches );
+			preg_match_all( '/.+?\<span\s+class\=\"transcribed[\_]word\"\>(<a.+?\>)?(.+?)(\<\/a\>)?\<\/span\>.+?/i', $transcription, $matches );
 			if( $matches[2] ) 
 			{
 				switch( $this->data['output_style'] )
